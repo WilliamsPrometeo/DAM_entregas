@@ -17,13 +17,13 @@ DAM_entregas/
 ├── alumno_1/
 │   ├── pom.xml
 │   └── src/main/java/
-│       ├── proyecto_videojuego.Main.java
+│       ├── Main.java
 │       └── Operaciones.java
 │
 └── alumno_2/
     ├── pom.xml
     └── src/main/java/
-        ├── proyecto_videojuego.Main.java
+        ├── Main.java
         └── Operaciones.java
 ```
 
@@ -33,7 +33,7 @@ DAM_entregas/
 
 * Mantener una **estructura modular** en Maven con un módulo por alumno.
 * Permitir a cada alumno **trabajar en su propio fork** sin modificar el repositorio base.
-* Evitar conflictos entre clases duplicadas (por ejemplo, `proyecto_videojuego.Main.java`, `Operaciones.java`).
+* Evitar conflictos entre clases duplicadas (por ejemplo, `Main.java`, `Operaciones.java`).
 * Facilitar la **revisión de entregas** por parte del docente en los forks individuales.
 
 ---
@@ -63,7 +63,7 @@ cd DAM_entregas
 ### 3. Trabajar en tu módulo
 
 * Usa la carpeta `alumno_1` (o crea una nueva con tu nombre).
-* Dentro de `src/main/java/`, añade o modifica tus clases (`proyecto_videojuego.Main.java`, `Operaciones.java`, etc.).
+* Dentro de `src/main/java/`, añade o modifica tus clases (`Main.java`, `Operaciones.java`, etc.).
 * No cambies ni borres módulos de otros compañeros.
 
 ### 4. Subir tus cambios
@@ -102,7 +102,7 @@ El profesor podrá:
   package alumno.nombre;
   ```
 * **Clases comunes:**
-  Pueden compartir nombre entre alumnos (`proyecto_videojuego.Main`, `Operaciones`, etc.),
+  Pueden compartir nombre entre alumnos (`Main`, `Operaciones`, etc.),
   pero deben estar en paquetes distintos para evitar conflictos.
 * **Commits claros:**
 
