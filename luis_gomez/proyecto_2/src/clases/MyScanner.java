@@ -1,4 +1,4 @@
-package Clases;
+package clases;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -15,42 +15,25 @@ public class MyScanner {
         boolean flag = true;
         while (flag) {
             try {
-                System.out.println(mns);
+                System.out.print(mns);
                 n = sc.nextInt();
                 sc.nextLine();
                 flag = false;
             } catch (InputMismatchException e) {
-                System.out.println("Eso no es número!");
+                System.out.println("Eso no es un numero!");
                 sc.nextLine();
             }
         }
         return n;
     }
 
-    public double pedirDecimal(String mns) {
-        double num = -1;
-        boolean flag = true;
-        while (flag) {
-            try {
-                System.out.printf(mns);
-                num = sc.nextDouble();
-                sc.nextLine();
-                flag = false;
-            }catch (InputMismatchException e) {
-                System.out.println("Eso no es número!");
-                sc.nextLine();
-            }
-        }
-        return num;
-    }
-
-    public String pedirSoloTexto(String texto) {
+    public String pedirSoloTexto (String texto){
         String input;
         boolean valido;
-        do {
+        do{
             System.out.println(texto);
             input = sc.nextLine().trim();
-            valido = input.matches("[a-zA-ZáéíóúüÁÉÍÓÚÜñÑ ]+");
+            valido = input.matches("[a-zA-ZáéíóúÁÉÍÓÚñÑäëïöüÄËÏÖÜ ]+");
             if (!valido) {
                 System.out.println("ERROR: solo se permiten letras (sin números ni símbolos). Inténtalo de nuevo.");
             }
@@ -58,18 +41,17 @@ public class MyScanner {
         return input;
     }
 
-    public char pedirLetra(String texto) {
+    public char pedirLetra (String texto){
         String input;
         boolean valido;
-        do {
+        do{
             System.out.println(texto);
             input = sc.nextLine().trim();
-            valido = input.matches("[a-zA-ZáéíóúüÁÉÍÓÚÜñÑ ]");
+            valido = input.matches("[a-zA-ZáéíóúÁÉÍÓÚñÑäëïöüÄËÏÖÜ ]");
             if (!valido) {
                 System.out.println("ERROR: solo se permite introducir una letra. Inténtalo de nuevo.");
             }
-        }while (!valido);
-
+        }while(!valido);
         return input.charAt(0);
     }
 
@@ -85,28 +67,20 @@ public class MyScanner {
         return texto;
     }
 
-    public Double pedirDoublePositivo(String mensaje) {
-        Double num = -1.0;
-        boolean valido = true;
-        while(valido){
-            try{
-                System.out.println(mensaje);
+    public double pedirDecimal(String mns) {
+        double num = -1;
+        boolean flag = true;
+        while (flag) {
+            try {
+                System.out.print(mns);
                 num = sc.nextDouble();
                 sc.nextLine();
-                if(num <= 0){
-                    System.out.println("Error: el numero tiene que ser mayor que 0");
-                }else{
-                    valido = false;
-                }
+                flag = false;
             }catch (InputMismatchException e){
-                System.out.println("Eso no es un numero.");
+                System.out.println("Eso no es un numero!");
                 sc.nextLine();
             }
         }
         return num;
-    }
-
-    public void cerrar() {
-        sc.close();
     }
 }

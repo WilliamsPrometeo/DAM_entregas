@@ -1,6 +1,6 @@
-package Clases;
+package clases;
 
-import Exceptions.VideojuegoException;
+import exceptions.VideojuegoException;
 
 import java.util.ArrayList;
 
