@@ -1,4 +1,4 @@
-package Clases;
+package clases;
 
 //Clase que tiene id unico, id, nombre y precio
 public class Videojuego {

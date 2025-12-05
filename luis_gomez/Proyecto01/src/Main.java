@@ -1,7 +1,7 @@
-import Clases.MyScanner;
-import Clases.Tienda;
-import Clases.Videojuego;
-import Exceptions.VideojuegoException;
+import clases.MyScanner;
+import clases.Tienda;
+import clases.Videojuego;
+import exceptions.VideojuegoException;
 
 public class Main {
 
