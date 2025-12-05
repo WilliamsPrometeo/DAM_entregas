@@ -1,4 +1,4 @@
-package proyectos_gordos;
+package proyectos_gordos.tienda_videojuegos;
 
 public class Videojuegos {
 

@@ -1,6 +1,9 @@
 package proyectos_gordos;
 
-import clases.MyScanner;
+import proyectos_gordos.recursos.MyScanner;
+import proyectos_gordos.exceptions.MyExceptionVG;
+import proyectos_gordos.tienda_videojuegos.TiendaVideojuegos;
+import proyectos_gordos.tienda_videojuegos.Videojuegos;
 
 public class GestionTiendaVG {
     public static final MyScanner sc = new MyScanner();
