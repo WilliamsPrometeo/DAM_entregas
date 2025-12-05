@@ -6,3 +6,4 @@ public enum TipoVehiculo {
     FURGONETA,
     CAMION
 }
+//
