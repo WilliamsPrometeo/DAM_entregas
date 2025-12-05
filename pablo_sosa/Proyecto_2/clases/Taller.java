@@ -72,12 +72,12 @@ public class Taller {
         boolean correcto = true; /* El boolean de siempre para hacer un menú*/
         do {
             correcto = true;
-            int opcion_TV = sc.pedirNumero("1. Turismo" +
+            int opcion = sc.pedirNumero("1. Turismo" +
                     "\n2. Motocicleta" +
                     "\n3. Furgoneta" +
                     "\n4. Camion" +
                     "\nIntroduce el tipo de vehiculo");
-            switch (opcion_TV) {
+            switch (opcion) {
                 case 1:
                     tipo = TipoVehiculo.TURISMO;
                     break;
@@ -173,12 +173,12 @@ public class Taller {
         boolean correcto = true;
         do {
             correcto = true;
-            int opcion_TV = sc.pedirNumero("1. Turismo" +
+            int opcion = sc.pedirNumero("1. Turismo" +
                     "\n2. Motocicleta" +
                     "\n3. Furgoneta" +
                     "\n4. Camion" +
                     "\n Introduce la opcion que desees");
-            switch (opcion_TV) {
+            switch (opcion) {
                 case 1:
                     TipoVehiculo = enums.TipoVehiculo.TURISMO;
                     break;
