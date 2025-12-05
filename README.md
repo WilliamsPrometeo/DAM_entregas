@@ -33,7 +33,7 @@ DAM_entregas/
 
 * Mantener una **estructura modular** en Maven con un módulo por alumno.
 * Permitir a cada alumno **trabajar en su propio fork** sin modificar el repositorio base.
-* Evitar conflictos entre clases duplicadas (por ejemplo, `Main.java`, `Operaciones.java`).
+* Evitar conflictos entre proyecto2.proyecto2.clases duplicadas (por ejemplo, `Main.java`, `Operaciones.java`).
 * Facilitar la **revisión de entregas** por parte del docente en los forks individuales.
 
 ---
@@ -63,7 +63,7 @@ cd DAM_entregas
 ### 3. Trabajar en tu módulo
 
 * Usa la carpeta `alumno_1` (o crea una nueva con tu nombre).
-* Dentro de `src/main/java/`, añade o modifica tus clases (`Main.java`, `Operaciones.java`, etc.).
+* Dentro de `src/main/java/`, añade o modifica tus proyecto2.proyecto2.clases (`Main.java`, `Operaciones.java`, etc.).
 * No cambies ni borres módulos de otros compañeros.
 
 ### 4. Subir tus cambios
