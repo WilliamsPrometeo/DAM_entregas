@@ -1,3 +1,6 @@
+package entrega1;
+
+import recursos.MyScanner;
 
 public class Main { //Se llama al Scanner y se crea una "tienda"
     private static final MyScanner sc = new MyScanner();

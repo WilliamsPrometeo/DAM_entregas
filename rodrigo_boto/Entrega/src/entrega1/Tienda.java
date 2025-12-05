@@ -1,3 +1,5 @@
+package entrega1;
+
 import java.util.ArrayList;
 public class Tienda {
 //GETTER Y SHETTERS
