@@ -1,4 +1,4 @@
-package Proyecto2.src;
+package proyecto2.src;
 
 import clases.Taller;
 import recursos.MyScanner;
@@ -43,6 +43,7 @@ public class Main {
                     exit = true;
                     break;
                 case 7:
+
                     boolean correcto;
                     do {
                         int hola= sc.pedirNumero("ME VAS A PONER BUENA NOTA??\n"+"1. SI\n"+"2. NO");
@@ -56,6 +57,7 @@ public class Main {
                             default:
                                 correcto = false;
                                 System.out.println("no te libras");
+                                break;
                         }
                     }while (!correcto);
                 default:
