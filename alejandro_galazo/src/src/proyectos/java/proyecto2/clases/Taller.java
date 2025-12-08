@@ -96,20 +96,54 @@ public class Taller {
         } while (Matricula.length() != 7);
         vehiculoTaller.setMatricula(Matricula);
 
-        vehiculos.add((Vehiculo) vehiculoTaller);
-        
+        boolean correcto;
+        TipoVehiculo tipo = null;
+        do {
+            correcto = true;
+            int opcion = sc.pedirNumero("1. CAMION" +
+                    "\n2. MOTOCICLETA" +
+                    "\n3. FURGONETA" +
+                    "\n4. TURISMO" +
+                    "\nIntroduce genero");
+            switch (opcion) {
+                case 1:
+                    tipo = TipoVehiculo.CAMION;
+                    break;
+                case 2:
+                    tipo = TipoVehiculo.MOTOCICLETA;
+                    break;
+                case 3:
+                    tipo = TipoVehiculo.FURGONETA;
+                    break;
+                case 4:
+                    tipo = TipoVehiculo.TURISMO;
+                    break;
+                case 5:
+                    System.out.println("Hola caracola (si lees esto no se me ha ocurrido nada)");
+                default:
+                    correcto = false;
+                    System.out.println("opcion incorrecta");
+                    break;
+            }
+        } while (!correcto);
+
+        vehiculoTaller.setTipo(tipo);
+
+        vehiculos.add(vehiculoTaller);
+        System.out.println("Vehiculo registrado");
+
     }
 
     /**
-     * Metodo:
+     * Metodo: registrar servivio
      *
      */
 
     public void registrarServicio() {
         String descripcion= sc.pideTexto("introduce la descripcion del servicio");
         String mecanico= sc.pideTexto("introduce el nombre del mecanico");
-        TipoServicio tipo = null;
 
+        TipoServicio tipo = null;
         boolean correcto;
 
         do {
@@ -145,8 +179,9 @@ public class Taller {
                     break;
             }
         } while (!correcto);
-        vehiculos.add(new Vehiculo());
-        
+
+        catalogoServicios.add(new Servicio(descripcion, mecanico, tipo));
+        System.out.println("Servicio registrado");
     }
 
     /**
@@ -154,37 +189,27 @@ public class Taller {
      * lanza excepcion personalizada
      * registra fecha de los trabajos realizados
      */
-    
+
     public String asignarServicio() throws VehiculoNoEncontrado {
-        buscarServicio(sc.pideTexto("introduce el servicio a realizar"));
-        String Matricula = sc.pideTexto("introduce la matricula del vehiculo");
-        
-        Servicio trabajos = null;
-        Vehiculo vehiculoTaller = null;
-        try {
-            buscarVehiculo(Matricula);
-        } catch (VehiculoNoEncontrado e) {
-            System.out.println(e.getMessage());
-            vehiculoTaller = null;
 
+        String servicioDesc = sc.pideTexto("Introduce la descripción del servicio: ");
+        Servicio servicio = buscarServicio(servicioDesc);
+
+        if (servicio == null) {
+            return "Servicio no encontrado.";
         }
-        if (trabajos != null) {
-            mostrarVehiculos();
-            String titulo = sc.pideTexto("introduce el titulo del libro");
-            buscarVehiculo(Matricula);
-            if (vehiculoTaller != null) {
-                vehiculos.remove(vehiculoTaller);
-                trabajosRealizados.put(vehiculoTaller, trabajos);
-                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-                String fecha_formateada = LocalDateTime.now().format(formatter);
-                System.out.printf("Fecha de prestamo: %s del vehiculo: %s", fecha_formateada, vehiculoTaller.getMatricula());
-            } else {
-                System.out.println("no existe el vehiculp con esa matricula disponible");
-            }
-        }
-        return (vehiculoTaller != null && vehiculoTaller != null) ? "libro prestado correctamente" : "error en el proceso";
+
+        String matricula = sc.pideTexto("Introduce la matrícula del vehículo: ");
+        Vehiculo vehiculo = buscarVehiculo(matricula);
+
+        trabajosRealizados.put(vehiculo, servicio);
+
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
+        String fecha = LocalDateTime.now().format(formatter);
+
+        return String.format("Servicio asignado el %s al vehículo %s",
+                fecha, vehiculo.getMatricula());
     }
-
     /**
      * Metodo: mostrarVehiculos
      *muestra vehiculos e implementa metodo para filtrar por tipo de vehiculo
@@ -224,13 +249,13 @@ public class Taller {
      *menu switch con blucle do while para seleccionar el tipo de vehiculo que quiere buscar
      */
 
-    public void filtrarVehiculosPorTipo(){
+    public TipoVehiculo filtrarVehiculosPorTipo(){
         TipoVehiculo vehiculo= null;
         boolean correcto;
         do {
             correcto = true;
             int opcion_genero = sc.pedirNumero("1. camion" +
-                    "\n2. No turismo" +
+                    "\n2. turismo" +
                     "\n3. motocicleta" +
                     "\n4. furgoneta" +
                     "\nIntroduce tipo de vehiculo");
@@ -253,6 +278,7 @@ public class Taller {
                     break;
             }
         } while (!correcto);
+        return vehiculo;
     }
 
     /**
@@ -273,13 +299,13 @@ public class Taller {
      *busca el vehiculo por su matricula, sino lanza execepcion de vehiculo no encontra¡do
      */
     
-    public void buscarVehiculo(String matricula) throws VehiculoNoEncontrado{
+    public Vehiculo buscarVehiculo(String matricula) throws VehiculoNoEncontrado{
         mostrarVehiculos();
         String opcion = sc.pideTexto("Ingrese la matricula: ");
         for (Vehiculo vehiculo : vehiculos) {
             if (vehiculo.getMatricula() == opcion)
                 System.out.printf("Vehiculo encontrado con matricula: %s", opcion);
-            return;
+
 
         }throw new VehiculoNoEncontrado("No existe un vehiculo con esa matricula registrado.");
         
@@ -290,10 +316,10 @@ public class Taller {
      *comprieba que el servicio requerido cuadre con la descripcion proporcionada
      */
     
-    public String buscarServicio(String descripcion){
+    public Servicio buscarServicio(String descripcion){
         for (Servicio servicio : catalogoServicios) {
             if (servicio.getDescripcion().equals(descripcion)) {
-                return descripcion;
+
             }
         }
         return null;

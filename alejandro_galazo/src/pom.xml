@@ -5,19 +5,15 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>org.example</groupId>
-        <artifactId>DAM_entregas</artifactId>
+        <artifactId>alejandro_galazo</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>alejandro_galazo</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>src</module>
-    </modules>
+    <artifactId>src</artifactId>
 
     <properties>
-        <maven.compiler.source>25</maven.compiler.source>
-        <maven.compiler.target>25</maven.compiler.target>
+        <maven.compiler.source>23</maven.compiler.source>
+        <maven.compiler.target>23</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 

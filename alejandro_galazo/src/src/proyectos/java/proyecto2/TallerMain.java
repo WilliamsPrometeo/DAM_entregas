@@ -50,10 +50,6 @@ public class TallerMain {
                     System.out.println("saliendo..." );
                     correcto = true;
                     break;
-                case 7:
-                    System.out.println("saliendo..." );
-                    correcto = true;
-                    break;
                 default:
                     System.out.println("Opcion no valida" );
                     break;
