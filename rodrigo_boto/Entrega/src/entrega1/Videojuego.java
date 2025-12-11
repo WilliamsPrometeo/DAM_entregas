@@ -1,3 +1,5 @@
+package entrega1;
+
 public class Videojuego { //Inicialización de las variables
     private static int contador = 0;
     private int id;
