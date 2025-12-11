@@ -101,7 +101,7 @@ El profesor podrá:
   ```java
   package alumno.nombre;
   ```
-* **Clases comunes:**
+* **clases comunes:**
   Pueden compartir nombre entre alumnos (`Main`, `Operaciones`, etc.),
   pero deben estar en paquetes distintos para evitar conflictos.
 * **Commits claros:**
