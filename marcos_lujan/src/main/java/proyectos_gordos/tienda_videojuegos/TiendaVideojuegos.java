@@ -1,4 +1,6 @@
-package proyectos_gordos;
+package proyectos_gordos.tienda_videojuegos;
+
+import proyectos_gordos.exceptions.MyExceptionVG;
 
 import java.util.ArrayList;
 
