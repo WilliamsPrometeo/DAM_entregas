@@ -1,5 +1,4 @@
 import clases.Taller;
-import recursos.MyScanner;
 
 public class Main {
 
