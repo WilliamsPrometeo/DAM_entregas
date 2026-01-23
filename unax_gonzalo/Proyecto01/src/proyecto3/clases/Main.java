@@ -1,6 +1,7 @@
 package proyecto3.clases;
+import proyecto3.recursos.*;
+import proyecto3.recursos.Utilidades.*;
 
-import recursos.Utilidades;
 public class Main {
 
     public static void main(String[] args) {

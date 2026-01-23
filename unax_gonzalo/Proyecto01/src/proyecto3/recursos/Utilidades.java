@@ -1,6 +1,6 @@
 package proyecto3.recursos;
 
-import recursos.MyScanner;
+import proyecto3.recursos.*;
 
 import java.io.File;
 

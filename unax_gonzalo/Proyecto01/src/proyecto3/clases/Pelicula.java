@@ -1,7 +1,6 @@
 package proyecto3.clases;
 
-import recursos.*;
-
+import proyecto3.recursos.Genero;
 import java.time.LocalDate;
 import java.util.Objects;
 

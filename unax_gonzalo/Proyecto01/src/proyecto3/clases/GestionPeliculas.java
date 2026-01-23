@@ -1,8 +1,9 @@
 package proyecto3.clases;
 
-import recursos.Genero;
-import recursos.MyScanner;
-import recursos.Utilidades;
+
+import proyecto3.recursos.Genero;
+import proyecto3.recursos.MyScanner;
+import proyecto3.recursos.Utilidades;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -63,11 +64,6 @@ public class GestionPeliculas {
         } while (!exit);
     }
 
-    /**
-     * Registra una nueva película en el catalogo
-     * Solicita codigo, titulo, director, genero y fecha de estreno
-     * El codigo debe ser unico y cumplir el formato: 2 letras mayúsculas + 3 dígitos
-     */
     public static void registrarPelicula() {
         String codigo;
         do {
@@ -91,10 +87,6 @@ public class GestionPeliculas {
         System.out.println("Película registrada correctamente.");
     }
 
-    /**
-     * Verifica si ya existe una película con el código dado
-     * @return true si existe, false en caso contrario
-     */
     public static boolean existeCodigo(String codigo) {
         for (Pelicula peli : peliculas) {
             if (peli.getCodigo().equals(codigo)) {
@@ -104,10 +96,6 @@ public class GestionPeliculas {
         return false;
     }
 
-    /**
-     * Valida que el código tenga el formato: 2 letras mayúsculas seguidas de 3 dígitos.
-     * @return true si existe, false en caso contrario
-     */
     public static boolean validarCodigo(String codigo) {
         if (codigo == null || !codigo.matches("^[A-Z]{2}\\d{3}$")) {
             System.out.println("Código incorrecto. Ejemplo válido: AB123");
@@ -116,9 +104,6 @@ public class GestionPeliculas {
         return true;
     }
 
-    /**
-     * Muestra todas las películas registradas junto con sus visualizaciones
-     */
     public static void mostrarPeliculas() {
         if (peliculas.isEmpty()) {
             System.out.println("No hay películas registradas.");
@@ -130,10 +115,6 @@ public class GestionPeliculas {
         }
     }
 
-    /**
-     * Simula la visualización de una película.
-     * Incrementa su contador de visualizaciones y registra la acción en un archivo.
-     */
     public static void verPelicula() {
         String codigo = sc.pideTexto("Introduce el código de la película: ").toUpperCase();
         Pelicula pelicula = getPelicula(codigo);
@@ -149,11 +130,6 @@ public class GestionPeliculas {
         }
     }
 
-    /**
-     * Busca una película por su código.
-     *
-     * @return La película si se encuentra, null en caso contrario.
-     */
     public static Pelicula getPelicula(String codigo) {
         for (Pelicula peli : peliculas) {
             if (peli.getCodigo().equals(codigo)) {
@@ -163,9 +139,6 @@ public class GestionPeliculas {
         return null;
     }
 
-    /**
-     * Muestra las estadísticas de visualización de todas las películas.
-     */
     public static void mostrarEstadisticas() {
         if (peliculas.isEmpty()) {
             System.out.println("No hay películas registradas.");
@@ -178,10 +151,6 @@ public class GestionPeliculas {
         }
     }
 
-    /**
-     * Registra una visualización en un archivo de texto
-     * Muestra todas las películas que hayan sido visualizada
-     */
     public static void registrarVisualizacion(Pelicula pelicula) {
         String rutaBase = System.getProperty("user.home") + "/Desktop/DAM/Proyectos/Peliculas/";
         if (comprobarDirectorio(rutaBase)) {
@@ -201,12 +170,6 @@ public class GestionPeliculas {
         }
     }
 
-    /**
-     * Comprueba si existe un directorio, si no, lo crea
-     *
-     * Ruta del directorio a comprobar/crear
-     * @return true si el directorio existe o se creó correctamente
-     */
     public static boolean comprobarDirectorio(String rutaBase) {
         if (Utilidades.existDirectory(rutaBase)) {
             return true;
