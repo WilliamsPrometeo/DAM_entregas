@@ -1,3 +1,7 @@
+import Juego.Precioincorrecto;
+import Juego.Tienda;
+import Juego.Videojuegos;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 

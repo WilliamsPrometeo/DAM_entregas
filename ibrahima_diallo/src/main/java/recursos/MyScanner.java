@@ -1,9 +1,6 @@
-package tallerdemecanico.recursos;
-
-import tallerdemecanico.enums.TipoVehiculo;
+package recursos;
 
 import java.util.InputMismatchException;
-import java.util.Map;
 import java.util.Scanner;
 /**
  * Clase MyScanner
