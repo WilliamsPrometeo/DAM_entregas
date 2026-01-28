@@ -1,6 +1,5 @@
 package clases;
 
-import recursos.MyScanner;
 import recursos.TipoServicio;
 import recursos.TipoVehiculo;
 import recursos.VehiculoNoEncontrado;
