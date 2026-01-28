@@ -1,8 +1,8 @@
 package proyecto_02;
 
-import clases.proyecto_02.clases.Taller;
-import clases.proyecto_02.exceptions.VehiculoNoEncontrado;
-import recursos.*;
+import Proyecto_01.Scanner.MyScanner;
+import proyecto_02.clases.Taller;
+import proyecto_02.exceptions.VehiculoNoEncontrado;
 
 public class Main {
     private static final MyScanner sc = new MyScanner();

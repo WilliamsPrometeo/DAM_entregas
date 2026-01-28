@@ -1,10 +1,10 @@
 package Proyecto_01.Manager_Tienda;
 
 // se importan las clases que se necesitan llamar para el programa
-import Clases.Proyecto_01.Clases.Tienda;
-import Clases.Proyecto_01.Clases.Videojuego;
-import Clases.Proyecto_01.Exceptions.PrecioInvalidoException;
-import Clases.Scanners.MyScanner;
+import Proyecto_01.Clases.Tienda;
+import Proyecto_01.Clases.Videojuego;
+import Proyecto_01.Exceptions.PrecioInvalidoException;
+import Proyecto_01.Scanner.MyScanner;
 
 //creamos el metodo principal del programa
 public class Main {

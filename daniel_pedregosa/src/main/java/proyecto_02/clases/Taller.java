@@ -1,9 +1,9 @@
 package proyecto_02.clases;
 
-import clases.proyecto_02.enums.TipoServicio;
-import clases.proyecto_02.enums.TipoVehiculo;
-import clases.proyecto_02.exceptions.VehiculoNoEncontrado;
-import recursos.MyScanner;
+import Proyecto_01.Scanner.MyScanner;
+import proyecto_02.enums.TipoServicio;
+import proyecto_02.enums.TipoVehiculo;
+import proyecto_02.exceptions.VehiculoNoEncontrado;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

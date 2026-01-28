@@ -1,6 +1,6 @@
 package proyecto_02.clases;
 
-import clases.proyecto_02.enums.TipoVehiculo;
+import proyecto_02.enums.TipoVehiculo;
 
 /**
  * clase del Vehiculo

@@ -1,6 +1,6 @@
 package Proyecto_01.Clases;
 
-import Clases.Proyecto_01.Exceptions.PrecioInvalidoException;
+import Proyecto_01.Exceptions.PrecioInvalidoException;
 
 import java.util.ArrayList;
 
