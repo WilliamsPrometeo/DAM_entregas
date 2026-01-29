@@ -1,3 +1,5 @@
+package Juego;
+
 public class Videojuegos {
     // Atributos
     private static int contadorId = 1; // ID autoincremental

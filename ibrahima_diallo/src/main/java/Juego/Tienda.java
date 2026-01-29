@@ -1,3 +1,5 @@
+package Juego;
+
 import java.util.ArrayList;
 
 public class Tienda {
@@ -26,7 +28,7 @@ public class Tienda {
     }
 
     // Buscar por ID
-    public Videojuegos   buscarPorId(int id) {
+    public Videojuegos buscarPorId(int id) {
         for (Videojuegos v : catalogo) {
             if (v.getId() == id) {
                 return v;

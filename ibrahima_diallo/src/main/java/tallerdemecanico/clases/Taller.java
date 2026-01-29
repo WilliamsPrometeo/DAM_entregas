@@ -3,7 +3,7 @@ package tallerdemecanico.clases;
 import tallerdemecanico.enums.TipoServicio;
 import tallerdemecanico.enums.TipoVehiculo;
 import tallerdemecanico.exception.VehiculoNoEncontrado;
-import tallerdemecanico.recursos.MyScanner;
+import recursos.MyScanner;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
