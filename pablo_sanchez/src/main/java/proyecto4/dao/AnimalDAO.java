@@ -10,7 +10,7 @@ import java.util.Map;
 
 public class AnimalDAO {
 
-    private static final String RUTA = System.getProperty("user.home") + "Desktop/DAM/Proyetos/Zoológico";
+    private static final String RUTA = System.getProperty("user.home") + "/Desktop/DAM/Proyetos/Zoológico";
     private static final File FICHERO = new File(RUTA + "zoo.dat");
 
     public void guardar(Map<Animal, Habitat> ubicaciones) {
