@@ -77,6 +77,7 @@ public class GestionPeliculas {
         }
 
         peliculas.add(pelicula);
+        visualizaciones.put(pelicula, 0);
         System.out.println("La película se ha agregado correctamente\n");
 
     }
