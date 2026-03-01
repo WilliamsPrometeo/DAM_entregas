@@ -90,6 +90,11 @@ public class GestionPeliculas {
             System.out.println("❌Estupido, mira que era fácil poner 3 letras y 3 números, vuelve a intentarlo. Ejemplo válido: ABC123.\n");
             return false;
         }
+        for (Pelicula p :peliculas){
+            if (p.getCodigo().equals(codigoPelicula)) {
+                return false;
+            }
+        }
         return true;
     }
 
