@@ -5,15 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>org.example</groupId>
-        <artifactId>DAM_entregas</artifactId>
+        <artifactId>luis_gomez</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>luis_gomez</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>Proyecto_04</module>
-    </modules>
+    <artifactId>Proyecto_04</artifactId>
 
     <properties>
         <maven.compiler.source>25</maven.compiler.source>
